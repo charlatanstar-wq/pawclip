@@ -1,0 +1,9 @@
+{
+  "defaults": {"pet": "fluffy orange tabby cat", "place": "small apartment living room", "duration": 5},
+  "shots": [
+    {"id": "01", "template": "zoomies"},
+    {"id": "02", "template": "head-tilt", "duration": 4},
+    {"id": "03", "template": "box"},
+    {"id": "04", "prompt": "一只橘猫趴在窗台上看雨，尾巴轻轻摆动，偶尔用爪子拍玻璃上的雨滴", "lang": "zh"}
+  ]
+}
