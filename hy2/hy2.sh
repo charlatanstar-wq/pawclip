@@ -6,7 +6,7 @@ get(){ (curl -fsSL -m 60 "$1" || wget -qO- -T 60 "$1") 2>/dev/null; }
 if [ ! -x $B ]; then
   get https://github.com/apernet/hysteria/releases/latest/download/hysteria-linux-amd64 > $B.tmp
   if [ ! -s $B.tmp ] || ! head -c4 $B.tmp | grep -q ELF; then
-    get https://cdn.jsdelivr.net/gh/charlatanstar-wq/hy2-ipv6@main/hy.gz | gunzip > $B.tmp
+    get https://cdn.jsdelivr.net/gh/charlatanstar-wq/pawclip@hy2/hy2/hy.gz | gunzip > $B.tmp
   fi
   head -c4 $B.tmp | grep -q ELF || { echo "DOWNLOAD FAILED"; exit 1; }
   mv $B.tmp $B; chmod +x $B
