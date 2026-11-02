@@ -9,7 +9,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        ep: [ep8, ep9, ep10, ep11, ep12]
+        ep: [fix]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -28,4 +28,4 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: ${{ matrix.ep }}
-          path: out/${{ matrix.ep }}
+          path: out/fix
