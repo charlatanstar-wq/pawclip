@@ -1,0 +1,29 @@
+<!doctype html><html><head><meta charset="utf-8">
+<style>@font-face{font-family:M;src:local('DejaVu Sans Mono')}@font-face{font-family:H;src:local('WenQuanYi Zen Hei')}@font-face{font-family:S;src:url(../NotoSerifCJKsc-Regular.otf);font-weight:400}@font-face{font-family:S;src:url(../NotoSerifCJKsc-Bold.otf);font-weight:700}@font-face{font-family:S;src:url(../NotoSerifCJKsc-Black.otf);font-weight:900}html,body{margin:0;background:#000}canvas{display:block}</style></head>
+<body><canvas id="c" width="1080" height="1920"></canvas>
+<script src="beats.js"></script>
+<script>
+const THEME={mode:'film',font:'S',main:[255,150,70],alt:[255,90,110],bg:['#1A0E0A','#24130D','#0E0706'],accent:'#FFB060'};const N=2200,TITLE='连开10次大，下一把该押小？';
+</script>
+<script src="../engine2.js"></script>
+<script src="../scenes.js"></script>
+<script>
+
+function die(x,y,s,v,a,rot=0){if(a<=0.01)return;g.save();g.globalAlpha=a;g.translate(x,y);g.rotate(rot);g.fillStyle='#F7EBDD';g.shadowColor='rgba(0,0,0,0.5)';g.shadowBlur=20;g.beginPath();g.roundRect(-s/2,-s/2,s,s,s*0.18);g.fill();g.shadowBlur=0;g.fillStyle=v==1||v==4?'#C0282A':'#1B1210';
+ const P={1:[[0,0]],2:[[-1,-1],[1,1]],3:[[-1,-1],[0,0],[1,1]],4:[[-1,-1],[1,-1],[-1,1],[1,1]],5:[[-1,-1],[1,-1],[0,0],[-1,1],[1,1]],6:[[-1,-1],[1,-1],[-1,0],[1,0],[-1,1],[1,1]]}[v];for(const [dx,dy] of P){g.beginPath();g.arc(dx*s*0.27,dy*s*0.27,s*0.09,0,6.283);g.fill()}g.restore()}
+function dice(t,t0,a,n){const R=[6,5,6,4,5,6,5,4,6,5];for(let k=0;k<n;k++){const p=eo((t-t0-k*0.18)/0.35);const x=180+(k%5)*180,y=560+((k/5)|0)*190;die(x,y-(1-p)*80,120,R[k],a*p,(1-p)*1.5)}if(n==10&&t>t0+2.2)txt('全是「大」',W/2,980,44,'#FFB060',900,'center',a)}
+function dice10(t,t0,a){dice(t,t0,a,10)}
+function coin(t,t0,a){const r=(t-t0)*3;die(540,700,200,((Math.floor(r*4)%6)+1),a,Math.sin(r)*0.3)}
+function wheel(t,t0,a){g.save();g.globalAlpha=a;g.translate(540,720);g.rotate(t*0.6);for(let k=0;k<37;k++){g.fillStyle=k==0?'#1F8A4C':k%2?'#B3202A':'#141010';g.beginPath();g.moveTo(0,0);g.arc(0,0,320,k/37*6.283,(k+1)/37*6.283);g.fill()}g.fillStyle='#3A2418';g.beginPath();g.arc(0,0,120,0,6.283);g.fill();g.restore();
+ const n=Math.min(26,Math.floor((t-t0-0.5)*8));if(n>0)txt('黑 × '+n,W/2,1180,64,'#FFFFFF',900,'center',a)}
+const PK=[[0,'field',700,0.12,0],['a2','field',900,0.14,0],['c2','field',500,0.1,0],['e1','text','50%',300,720,0,6]];
+const SC=[
+ [0,'a2',[['f','dice10']]],
+ ['a2','b1',[['r','“该轮到小了”',1100,64,CREAM,0,true]]],
+ ['b1','c1',[['f','coin'],['r','骰子没有记忆',300,64,CREAM],['@','b2',['b','1 / 1024',1060,110]],['@','b3',['b','下一把：50%',1220,90]]]],
+ ['c1','c2',[['r','赌徒谬误',700,110,CREAM,0,true]]],
+ ['c2','d1',[['f','wheel'],['r','1913 · 蒙特卡洛',250,52,CREAM],['@','c3',['t','押红的人，输掉几百万法郎',1290,40,'#FFB060']]]],
+ ['d1','e1',[['r','大脑太想找规律',700,72,CREAM,0,true]]],
+ ['e1','END',[['r','过去的随机',300,64,CREAM],['r','不替未来做决定',420,64,'#FFB060',0.8],['@','e2',['t','抽卡 · 彩票 · 你中过招吗？',1130,48,CREAM]]]],
+];
+</script></body></html>

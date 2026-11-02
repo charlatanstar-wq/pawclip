@@ -1,0 +1,26 @@
+<!doctype html><html><head><meta charset="utf-8">
+<style>@font-face{font-family:M;src:local('DejaVu Sans Mono')}@font-face{font-family:H;src:local('WenQuanYi Zen Hei')}@font-face{font-family:S;src:url(../NotoSerifCJKsc-Regular.otf);font-weight:400}@font-face{font-family:S;src:url(../NotoSerifCJKsc-Bold.otf);font-weight:700}@font-face{font-family:S;src:url(../NotoSerifCJKsc-Black.otf);font-weight:900}html,body{margin:0;background:#000}canvas{display:block}</style></head>
+<body><canvas id="c" width="1080" height="1920"></canvas>
+<script src="beats.js"></script>
+<script>
+const THEME={mode:'dark',font:'H',main:[190,120,255],alt:[90,200,255],bg:['#0A0718','#140C2A','#06040F'],accent:'#7FE0FF'};const N=2600,TITLE='你和任何一个人，只隔几个人';
+</script>
+<script src="../engine2.js"></script>
+<script src="../scenes.js"></script>
+<script>
+
+const HOP=[[160,1180],[300,960],[480,1020],[600,800],[760,700],[860,520],[940,360]];
+function L_hops(i,t){const q=P[i];if(i<7*60){const h=(i/60)|0;const [x,y]=HOP[h];const ang=q.h1*6.283,r=26*Math.sqrt(q.h2);const vis=t>S('b1')+h*0.5;return [x+Math.cos(ang)*r,y+Math.sin(ang)*r,h==0||h==6?7:5,vis?0.9:0.05,h==0||h==6?3:0]}
+ const seg=i%6;const u=(q.h1+t*0.3)%1;const A=HOP[seg],B=HOP[seg+1];const vis=t>S('b1')+seg*0.5+0.5;return [lerp(A[0],B[0],u),lerp(A[1],B[1],u),2.5,vis?0.5:0,1]}
+function L_burst(i,t){const q=P[i];const L=q.h1<0.02?0:q.h1<0.15?1:2;const R=[0,180,380][L];const ang=q.h2*6.283;const k=clamp((t-S('c2')-L*0.5)/0.6);const r=R*k+(L?q.h3*60:0);return [540+Math.cos(ang)*r,760+Math.sin(ang)*r,L==0?8:3,L==0?1:0.6*k,L==0?3:L==1?0:1]}
+function hoplabels(t,t0,a){txt('你',HOP[0][0],HOP[0][1]+60,40,'#7FE0FF',900,'center',a);txt('陌生人',HOP[6][0]-20,HOP[6][1]-60,40,'#7FE0FF',900,'center',a*eo((t-t0-3)/0.4))}
+const PK=[[0,'text','6',700,720,0,7],['b1','custom','L_hops'],['c1','custom','L_burst'],['d1','field',900,0.12,0],['e1','custom','L_hops'],['e2','text','谁？',300,720,3,6]];
+const SC=[
+ [0,'a2',[['r','你 → 任何一个陌生人',320,56,CREAM,0.1],['@','a1+1.6',['r','只隔几个人',1120,72,CREAM,0,true]]]],
+ ['a2','b1',[['r','六度分隔',1120,96,CREAM,0,true]]],
+ ['b1','c1',[['f','hoplabels'],['r','1967 · 米尔格拉姆的信',260,52,CREAM],['@','b2',['b','5 ~ 6 人',1310,90]]]],
+ ['c1','d1',[['r','每人认识几百人',260,56,CREAM],['@','c2',['row',['几百','几万','几百万'],1220,52,CREAM,0,300,2]]]],
+ ['d1','e1',[['r','社交网络时代',300,64,CREAM],['@','d2',['b','3.57',760,220],['t','脸书 · 2016 · 近 16 亿用户',960,40]]]],
+ ['e1','END',[['f','hoplabels'],['r','朋友的朋友的朋友',260,52,CREAM]]],
+];
+</script></body></html>

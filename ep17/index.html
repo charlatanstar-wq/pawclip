@@ -1,0 +1,29 @@
+<!doctype html><html><head><meta charset="utf-8">
+<style>@font-face{font-family:M;src:local('DejaVu Sans Mono')}@font-face{font-family:H;src:local('WenQuanYi Zen Hei')}@font-face{font-family:S;src:url(../NotoSerifCJKsc-Regular.otf);font-weight:400}@font-face{font-family:S;src:url(../NotoSerifCJKsc-Bold.otf);font-weight:700}@font-face{font-family:S;src:url(../NotoSerifCJKsc-Black.otf);font-weight:900}html,body{margin:0;background:#000}canvas{display:block}</style></head>
+<body><canvas id="c" width="1080" height="1920"></canvas>
+<script src="beats.js"></script>
+<script>
+const THEME={mode:'pixel',font:'H',main:[255,214,80],alt:[90,220,255],bg:['#140C34','#1E1250','#0D0826'],fg:'#FFF6DA',dim:'rgba(255,246,218,0.62)',accent:'#5ADCFF'};const N=1600,TITLE='最简单的策略，赢了所有聪明人';
+</script>
+<script src="../engine2.js"></script>
+<script src="../scenes.js"></script>
+<script>
+
+const Y='#FFD650',C='#5ADCFF',RD='#FF5A7A';
+function code(t,t0,a){g.save();g.globalAlpha=a;g.fillStyle='rgba(10,8,30,0.85)';g.fillRect(140,520,800,330);g.strokeStyle=Y;g.lineWidth=4;g.strokeRect(140,520,800,330);g.font='bold 40px M';g.fillStyle='#9BFFB0';
+ ['10 IF N=1 THEN C','20 IF LAST=C THEN C','30 IF LAST=D THEN D','40 RETURN'].forEach((l,k)=>{const p=clamp((t-t0-k*0.35)/0.3);g.globalAlpha=a*p;g.fillText(l,180,590+k*70)});g.restore()}
+function grid(t,t0,a){txt('合作',420,520,40,C,900,'center',a);txt('背叛',740,520,40,RD,900,'center',a);txt('合作',220,660,40,C,900,'center',a);txt('背叛',220,860,40,RD,900,'center',a);
+ const v=[['3 , 3','0 , 5'],['5 , 0','1 , 1']];for(let r=0;r<2;r++)for(let c=0;c<2;c++){const x=420+c*320,y=660+r*200;g.save();g.globalAlpha=a*eo((t-t0-0.3-(r*2+c)*0.25)/0.3);g.fillStyle=r==c?'rgba(90,220,255,0.18)':'rgba(255,90,122,0.18)';g.fillRect(x-140,y-80,280,160);g.restore();txt(v[r][c],x,y,52,'#FFFFFF',900,'center',a*eo((t-t0-0.3-(r*2+c)*0.25)/0.3))}}
+function rounds(t,t0,a){const me='CCDCCCDC',op='CDCCCDCC';const n=Math.min(8,Math.floor((t-t0)*3));for(let k=0;k<n;k++){const x=180+k*103;const m=k==0?'C':op[k-1];g.save();g.globalAlpha=a;g.fillStyle=m=='C'?C:RD;g.fillRect(x-36,560,72,72);g.fillStyle=op[k]=='C'?C:RD;g.fillRect(x-36,700,72,72);g.restore()}
+ txt('以牙还牙',W/2,480,40,Y,900,'center',a);txt('对手',W/2,840,36,DIM,700,'center',a)}
+function board(t,t0,a){const L=[['以牙还牙',504],['策略 B',500],['策略 C',486],['策略 D',482],['……',0]];L.forEach(([n,s],k)=>{const p=eo((t-t0-k*0.2)/0.4);txt((k+1)+'.  '+n,300,560+k*110,52,k==0?Y:CREAM,900,'left',a*p);if(s)txt(String(s),820,560+k*110,52,k==0?Y:DIM,900,'right',a*p)})}
+const PK=[[0,'text','4 行',360,720,0,8],['a2','field',500,0.25,0],['e1','text','C',600,720,3,8]];
+const SC=[
+ [0,'a2',[['r','1980 · 电脑对战比赛',320,56,CREAM,0.1],['@','a1+2',['r','最简单的赢了',1120,72,Y,0,true]]]],
+ ['a2','b1',[['f','code'],['r','只有四行代码',1000,64,CREAM]]],
+ ['b1','c1',[['r','囚徒困境',300,80,CREAM,0,true],['@','b2',['f','grid']]]],
+ ['c1','d1',[['f','rounds'],['r','先合作，再照学',1000,60,Y],['@','c2',['t','不先背叛 · 不吃亏 · 会原谅',1100,44,C]]]],
+ ['d1','e1',[['f','board'],['@','d2',['r','没赢过任何对手，却总分第一',300,48,Y]]]],
+ ['e1','END',[['row',['善良','可报复','能原谅','简单'],300,52,CREAM,0,250,0],['@','e2',['r','你是先合作的人吗？',1150,60,Y,0,true]]]],
+];
+</script></body></html>

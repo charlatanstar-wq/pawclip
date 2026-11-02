@@ -1,0 +1,26 @@
+<!doctype html><html><head><meta charset="utf-8">
+<style>@font-face{font-family:M;src:local('DejaVu Sans Mono')}@font-face{font-family:H;src:local('WenQuanYi Zen Hei')}@font-face{font-family:S;src:url(../NotoSerifCJKsc-Regular.otf);font-weight:400}@font-face{font-family:S;src:url(../NotoSerifCJKsc-Bold.otf);font-weight:700}@font-face{font-family:S;src:url(../NotoSerifCJKsc-Black.otf);font-weight:900}html,body{margin:0;background:#000}canvas{display:block}</style></head>
+<body><canvas id="c" width="1080" height="1920"></canvas>
+<script src="beats.js"></script>
+<script>
+const THEME={mode:'neon',font:'H',main:[255,80,200],alt:[0,220,255],bg:['#0A0320','#170634','#05010F'],accent:'#00E8FF'};const N=2600,TITLE='为什么你的朋友，总比你朋友多';
+</script>
+<script src="../engine2.js"></script>
+<script src="../scenes.js"></script>
+<script>
+
+const NODES=[...Array(26)].map((_,k)=>{const r=rng(k*7+3);return {x:150+r()*780,y:380+r()*780,hub:k<3}});
+const LINKS=[];{const r=rng(99);for(let k=3;k<26;k++){const h=(r()*3)|0;LINKS.push([k,h]);if(r()<0.35)LINKS.push([k,3+((r()*23)|0)])}LINKS.push([0,1],[1,2]);}
+function L_net(i,t){const q=P[i];if(i<26*40){const n=NODES[(i/40)|0];const s=n.hub?60:24;const ang=q.h1*6.283,r=s*Math.sqrt(q.h2);return [n.x+Math.cos(ang)*r,n.y+Math.sin(ang)*r,n.hub?5:4,0.85,n.hub?3:0]}
+ const L=LINKS[i%LINKS.length];const A=NODES[L[0]],B=NODES[L[1]];const u=(q.h1+t*0.15)%1;return [lerp(A.x,B.x,u),lerp(A.y,B.y,u),2.5,0.45,1]}
+function links(t,t0,a){g.save();g.globalAlpha=a*0.35;g.strokeStyle='#5FEFFF';g.lineWidth=2;for(const [p,q] of LINKS){g.beginPath();g.moveTo(NODES[p].x,NODES[p].y);g.lineTo(NODES[q].x,NODES[q].y);g.stroke()}g.restore()}
+const PK=[[0,'text','朋友 > 你',170,720,0,5],['b2','custom','L_net'],['d1','field',900,0.15,0],['e1','custom','L_net'],['e2','text','你呢？',260,720,3,6]];
+const SC=[
+ [0,'b1',[['r','朋友们的朋友，都比你多？',320,52,CREAM,0.1],['@','a2',['r','友谊悖论',1130,96,CREAM,0,true]]]],
+ ['b1','b2',[['r','1991 · 斯科特·费尔德',600,56,CREAM],['t','Scott L. Feld',700,36]]],
+ ['b2','d1',[['f','links'],['r','人际关系网',280,56,CREAM],['@','c1',['t','社交达人 = 大圆点',1260,40,'#00E8FF']],['@','c2',['b','被重复数了很多遍',1260,70]]]],
+ ['d1','e1',[['r','朋友圈',300,80,CREAM,0,true],['@','d2',['b','数学的错觉',760,120]]]],
+ ['e1','e2',[['f','links'],['r','盯住“朋友的朋友”',280,56,CREAM],['t','更早发现流感',1260,44,'#00E8FF',0.6]]],
+ ['e2','END',[['r','你是朋友最多的那个吗？',1100,60,CREAM,0,true]]],
+];
+</script></body></html>

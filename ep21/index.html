@@ -1,0 +1,26 @@
+<!doctype html><html><head><meta charset="utf-8">
+<style>@font-face{font-family:M;src:local('DejaVu Sans Mono')}@font-face{font-family:H;src:local('WenQuanYi Zen Hei')}@font-face{font-family:S;src:url(../NotoSerifCJKsc-Regular.otf);font-weight:400}@font-face{font-family:S;src:url(../NotoSerifCJKsc-Bold.otf);font-weight:700}@font-face{font-family:S;src:url(../NotoSerifCJKsc-Black.otf);font-weight:900}html,body{margin:0;background:#000}canvas{display:block}</style></head>
+<body><canvas id="c" width="1080" height="1920"></canvas>
+<script src="beats.js"></script>
+<script>
+const THEME={mode:'ink',font:'S',main:[176,40,30],alt:[40,40,40],bg:['#F4EEE2','#EFE7D8','#E8DECB'],fg:'#1C1A17',dim:'rgba(28,26,23,0.6)',accent:'#B0281E'};const N=2200,TITLE='每天进步1%，一年后是多少';
+</script>
+<script src="../engine2.js"></script>
+<script src="../scenes.js"></script>
+<script>
+
+const RED='#B0281E',INKC='#1C1A17';
+function up(t,t0,a){const p=clamp((t-t0)/2);const P1=[],P2=[];for(let d=0;d<=365*p;d+=3){P1.push([150+d*2.1,1150-Math.min(Math.pow(1.01,d),40)*17]);P2.push([150+d*2.1,1150-Math.pow(0.99,d)*17*1.5])}
+ g.save();g.globalAlpha=a;g.lineWidth=7;g.lineCap='round';g.strokeStyle=RED;g.beginPath();P1.forEach((q,k)=>k?g.lineTo(q[0],q[1]):g.moveTo(q[0],q[1]));g.stroke();g.strokeStyle='rgba(28,26,23,0.7)';g.beginPath();P2.forEach((q,k)=>k?g.lineTo(q[0],q[1]):g.moveTo(q[0],q[1]));g.stroke();g.restore()}
+function vbrush(s,x,y,sz,a,col){[...s].forEach((ch,k)=>{if(a<=0)return;g.save();g.globalAlpha=a;g.font=`900 ${sz}px S`;g.textAlign='center';g.fillStyle=col||INKC;g.fillText(ch,x,y+k*sz*1.05);g.restore()})}
+const PK=[[0,'text','1.01',380,720,1,6],['b1','field',600,0.18,1],['d2','text','> 1',380,720,0,6],['e1','field',600,0.15,1],['e2','field',600,0.2,0]];
+const SC=[
+ [0,'b1',[['r','每天进步一点点',300,56,INKC,0.1],['@','a1+1.5',['b','× 37',1080,120]],['@','a2',['r','每天退步一点点 → 不到 3%',1230,48,INKC]]]],
+ ['b1','c1',[['f','up'],['r','1.01³⁶⁵ = 37.8',260,64,RED],['@','b2',['r','0.99³⁶⁵ = 0.03',1240,56,INKC]]]],
+ ['c1','d1',[['r','每天只差 0.02',300,60,INKC],['b','一年 · 一千多倍',760,110,0.6],['@','c2',['t','变化是乘上去的，不是加上去的',1000,44,RED]]]],
+ ['d1','d2',[['r','会有平台期，会有低谷',700,64,INKC,0,true]]],
+ ['d2','e1',[['r','方向比速度重要',260,64,RED]]],
+ ['e1','END',[['f','vbrush2'],['@','e2',['r','你今天的 0.01 是什么？',1200,56,INKC,0,true]]]],
+];
+function vbrush2(t,t0,a){vbrush('日拱一卒',540,420,110,a*eo((t-t0)/0.6),RED)}
+</script></body></html>

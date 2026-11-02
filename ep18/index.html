@@ -1,0 +1,27 @@
+<!doctype html><html><head><meta charset="utf-8">
+<style>@font-face{font-family:M;src:local('DejaVu Sans Mono')}@font-face{font-family:H;src:local('WenQuanYi Zen Hei')}@font-face{font-family:S;src:url(../NotoSerifCJKsc-Regular.otf);font-weight:400}@font-face{font-family:S;src:url(../NotoSerifCJKsc-Bold.otf);font-weight:700}@font-face{font-family:S;src:url(../NotoSerifCJKsc-Black.otf);font-weight:900}html,body{margin:0;background:#000}canvas{display:block}</style></head>
+<body><canvas id="c" width="1080" height="1920"></canvas>
+<script src="beats.js"></script>
+<script>
+const THEME={mode:'pastel',font:'H',main:[236,110,90],alt:[110,140,230],bg:['#FFF6EE','#FDF0F3','#EEF1FF'],fg:'#3A2433',dim:'rgba(58,36,51,0.6)',accent:'#EC6E5A'};const N=1800,TITLE='你出的价，被一个无关数字偷偷改了';
+</script>
+<script src="../engine2.js"></script>
+<script src="../scenes.js"></script>
+<script>
+
+const INKC='#3A2433',OR='#EC6E5A',BL='#6E8CE6';
+function spinner(t,t0,a){const v=Math.floor((t-t0)*2)%2?65:10;g.save();g.globalAlpha=a;g.translate(540,700);g.rotate((t-t0)*2.2);for(let k=0;k<12;k++){g.fillStyle=k%2?'#FFD3C9':'#D9E1FF';g.beginPath();g.moveTo(0,0);g.arc(0,0,260,k/12*6.283,(k+1)/12*6.283);g.fill()}g.restore();
+ g.save();g.globalAlpha=a;g.fillStyle=INKC;g.beginPath();g.moveTo(540,420);g.lineTo(520,380);g.lineTo(560,380);g.fill();g.restore();txt('10 或 65',W/2,1030,52,INKC,900,'center',a)}
+function compare(t,t0,a){[[10,25,BL],[65,45,OR]].forEach(([s,g2,c],k)=>{const x=330+k*420;const p=eo((t-t0-k*0.6)/0.6);txt('看到 '+s,x,1110,44,c,900,'center',a);const h=g2*12*p;g.save();g.globalAlpha=a;g.fillStyle=c;g.fillRect(x-70,1050-h,140,h);g.restore();txt(g2+'%',x,1020-h,60,c,900,'center',a*p)})}
+function tag(t,t0,a){g.save();g.globalAlpha=a;g.fillStyle='#FFFFFF';g.shadowColor='rgba(0,0,0,0.15)';g.shadowBlur=20;g.beginPath();g.roundRect(240,480,600,420,30);g.fill();g.restore();
+ txt('原价 ¥1999',W/2,600,60,'rgba(58,36,51,0.5)',900,'center',a);const p=eo((t-t0-0.6)/0.4);g.save();g.globalAlpha=a*p;g.strokeStyle=OR;g.lineWidth=8;g.beginPath();g.moveTo(330,605);g.lineTo(330+420*p,595);g.stroke();g.restore();bignum('¥599',W/2,770,130,a*eo((t-t0-1)/0.4))}
+const PK=[[0,'text','锚',520,720,0,6],['b1','field',600,0.2,0],['c1','field',300,0.15,3],['e2','text','原价？',260,720,3,6]];
+const SC=[
+ [0,'b1',[['r','一个无关的数字',320,56,INKC,0.1],['@','a1+1.5',['r','悄悄改了你的判断',1100,60,OR]],['@','a2',['r','锚定效应',1230,72,INKC,0,true]]]],
+ ['b1','c1',[['f','spinner'],['r','1974 · 转盘实验',250,52,INKC],['@','b2',['t','非洲国家占联合国的百分之几？',1180,44,INKC]]]],
+ ['c1','d1',[['f','compare'],['@','c2',['r','随机数，拽走了答案',1220,56,OR]]]],
+ ['d1','d2',[['f','tag']]],
+ ['d2','e1',[['r','谈工资',300,80,INKC,0,true],['b','先报数的人占上风',760,80,0.3]]],
+ ['e1','e2',[['r','我心里的那个数',700,72,INKC,0,true],['t','—— 是从哪来的？',830,48,OR,0.8]]],
+];
+</script></body></html>

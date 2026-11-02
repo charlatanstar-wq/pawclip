@@ -1,0 +1,31 @@
+name: render
+on:
+  push:
+    branches: [vibe-render]
+permissions: {contents: write}
+jobs:
+  r:
+    runs-on: ubuntu-latest
+    env: {PLAYWRIGHT_BROWSERS_PATH: /home/runner/pw}
+    strategy:
+      fail-fast: false
+      matrix:
+        ep: [ep14, ep15, ep17, ep18, ep19, ep20, ep21, ep22]
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          sudo apt-get install -y -q fonts-wqy-zenhei ffmpeg >/dev/null
+          pip install -q playwright==1.49.1 numpy && python -m playwright install --with-deps chromium-headless-shell >/dev/null
+          python render.py ${{ matrix.ep }} full
+          ffmpeg -v error -y -i ${{ matrix.ep }}/video_noaudio.mp4 -i ${{ matrix.ep }}/mix.wav -c:v copy -c:a aac -b:a 192k -ar 44100 -shortest -movflags +faststart ${{ matrix.ep }}.mp4
+      - uses: actions/upload-artifact@v4
+        with: {name: '${{ matrix.ep }}', path: '${{ matrix.ep }}.mp4'}
+  pub:
+    needs: r
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with: {path: o, merge-multiple: true}
+      - run: |
+          cd o && ls -la && git init -q -b vibe-out && git add -A && git -c user.name=bot -c user.email=bot@x commit -qm out
+          git push -f https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git vibe-out

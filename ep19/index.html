@@ -1,0 +1,26 @@
+<!doctype html><html><head><meta charset="utf-8">
+<style>@font-face{font-family:M;src:local('DejaVu Sans Mono')}@font-face{font-family:H;src:local('WenQuanYi Zen Hei')}@font-face{font-family:S;src:url(../NotoSerifCJKsc-Regular.otf);font-weight:400}@font-face{font-family:S;src:url(../NotoSerifCJKsc-Bold.otf);font-weight:700}@font-face{font-family:S;src:url(../NotoSerifCJKsc-Black.otf);font-weight:900}html,body{margin:0;background:#000}canvas{display:block}</style></head>
+<body><canvas id="c" width="1080" height="1920"></canvas>
+<script src="beats.js"></script>
+<script>
+const THEME={mode:'blueprint',font:'H',main:[120,205,255],alt:[255,190,80],bg:['#0B2A4A','#0E3560','#081E36'],fg:'#EAF6FF',dim:'rgba(220,240,255,0.62)',accent:'#FFC85A'};const N=2400,TITLE='你通讯录再多，真朋友也就150个';
+</script>
+<script src="../engine2.js"></script>
+<script src="../scenes.js"></script>
+<script>
+
+const LY=[[5,90],[15,170],[50,260],[150,360]];
+function L_rings(i,t){const q=P[i];if(i>=1500)return field(i,t,0.08,2);let k=i<60?0:i<200?1:i<550?2:3;const [n,R]=LY[k];const show=t>=S('c1')+(k==0?0:k==1?0.0:S('c2')-S('c1')+(k-1)*0.6);
+ const ang=q.h1*6.283+t*0.05*(k%2?1:-1);const r=R+(q.h2-.5)*30;return [540+Math.cos(ang)*r,760+Math.sin(ang)*r,k==0?7:4,show?0.85:0.05,k==0?3:0]}
+function L_book(i,t){const q=P[i];const c=i%25,r=(i/25)|0;if(r>=40)return hidden(i);return [180+c*30,380+r*20,3,0.5,(i%7==0)?3:2]}
+function labels(t,t0,a){const L=[['5','最亲密'],['15','好朋友'],['50','朋友'],['150','叫得出名字']];L.forEach(([n,s],k)=>{const d=k<2?0:(S('c2')-S('c1'))+(k-2)*0.6;const p=eo((t-t0-d)/0.4);const y=760-LY[k][1]-20;txt(n+' · '+s,540,k==0?760:y,k==0?36:30,k==0?'#FFC85A':CREAM,900,'center',a*p)})}
+const PK=[[0,'text','150',420,720,0,6],['a2','custom','L_book'],['b1','field',800,0.12,0],['c1','custom','L_rings'],['d1','field',900,0.12,0],['e1','custom','L_rings'],['e2','text','5',520,740,3,6]];
+const SC=[
+ [0,'a2',[['r','通讯录 1000 人',320,56,CREAM,0.1],['@','a1+2',['r','真正维持得住：约 150',1110,60,'#FFC85A']]]],
+ ['a2','b1',[['r','邓巴数',1150,96,CREAM,0,true],['t','Robin Dunbar',1260,36]]],
+ ['b1','c1',[['r','大脑新皮层 ↑  群体 ↑',300,56,CREAM],['@','b2',['b','≈ 150 人',760,150]]]],
+ ['c1','d1',[['f','labels']]],
+ ['d1','e1',[['r','古代村落 · 军队的连',600,60,CREAM],['b','≈ 150',800,140,0.4],['@','d2',['t','超过了 → 靠规则管理',1000,48,'#FFC85A']]]],
+ ['e1','END',[['r','那 5 个人',250,64,'#FFC85A'],['@','e2',['r','最里面那圈有几个人？',1260,52,CREAM]]]],
+];
+</script></body></html>
