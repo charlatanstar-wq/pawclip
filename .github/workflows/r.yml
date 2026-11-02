@@ -10,7 +10,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        ep: [ep14, ep15, ep17, ep18, ep19, ep20, ep21, ep22]
+        ep: [ep13, ep16]
     steps:
       - uses: actions/checkout@v4
       - run: |
@@ -28,4 +28,4 @@ jobs:
         with: {path: o, merge-multiple: true}
       - run: |
           cd o && ls -la && git init -q -b vibe-out && git add -A && git -c user.name=bot -c user.email=bot@x commit -qm out
-          git push -f https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git vibe-out
+          git push -f https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git vibe-out2
