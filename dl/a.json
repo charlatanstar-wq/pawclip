@@ -1,0 +1,225 @@
+{
+  "total_count": 11,
+  "artifacts": [
+    {
+      "id": 13167235404,
+      "node_id": "MDg6QXJ0aWZhY3QxMzE2NzIzNTQwNA==",
+      "name": "asr",
+      "size_in_bytes": 3999,
+      "url": "https://api.github.com/repos/charlatanstar-wq/pawclip/actions/artifacts/13167235404",
+      "archive_download_url": "https://api.github.com/repos/charlatanstar-wq/pawclip/actions/artifacts/13167235404/zip",
+      "expired": false,
+      "digest": "sha256:b8ecf19a8b0f326510cd1b91c4879a7fa2d69e597f542250b2692eaf43b9df9b",
+      "created_at": "2026-11-02T17:56:51Z",
+      "updated_at": "2026-11-02T17:56:51Z",
+      "expires_at": "2027-01-31T17:43:44Z",
+      "workflow_run": {
+        "id": 41493877852,
+        "repository_id": 1427980591,
+        "head_repository_id": 1427980591,
+        "head_branch": "ming-tts",
+        "head_sha": "3004e80e865c5a0048dcc798c35d5c40914fbe6f"
+      }
+    },
+    {
+      "id": 13166685586,
+      "node_id": "MDg6QXJ0aWZhY3QxMzE2NjY4NTU4Ng==",
+      "name": "ep22",
+      "size_in_bytes": 7270674,
+      "url": "https://api.github.com/repos/charlatanstar-wq/pawclip/actions/artifacts/13166685586",
+      "archive_download_url": "https://api.github.com/repos/charlatanstar-wq/pawclip/actions/artifacts/13166685586/zip",
+      "expired": false,
+      "digest": "sha256:62e08dfb24be719d4c74073f9968f425cafc00b2eab92bb3103c5458dae1da92",
+      "created_at": "2026-11-02T17:51:13Z",
+      "updated_at": "2026-11-02T17:51:13Z",
+      "expires_at": "2027-01-31T17:43:44Z",
+      "workflow_run": {
+        "id": 41493877852,
+        "repository_id": 1427980591,
+        "head_repository_id": 1427980591,
+        "head_branch": "ming-tts",
+        "head_sha": "3004e80e865c5a0048dcc798c35d5c40914fbe6f"
+      }
+    },
+    {
+      "id": 13166595819,
+      "node_id": "MDg6QXJ0aWZhY3QxMzE2NjU5NTgxOQ==",
+      "name": "ep13",
+      "size_in_bytes": 7146843,
+      "url": "https://api.github.com/repos/charlatanstar-wq/pawclip/actions/artifacts/13166595819",
+      "archive_download_url": "https://api.github.com/repos/charlatanstar-wq/pawclip/actions/artifacts/13166595819/zip",
+      "expired": false,
+      "digest": "sha256:cbc47554e6b89502dd1318fd2dd01b34511a7ebb4c2f2a6edbf2f150ee591cf2",
+      "created_at": "2026-11-02T17:51:33Z",
+      "updated_at": "2026-11-02T17:51:33Z",
+      "expires_at": "2027-01-31T17:43:44Z",
+      "workflow_run": {
+        "id": 41493877852,
+        "repository_id": 1427980591,
+        "head_repository_id": 1427980591,
+        "head_branch": "ming-tts",
+        "head_sha": "3004e80e865c5a0048dcc798c35d5c40914fbe6f"
+      }
+    },
+    {
+      "id": 13166475838,
+      "node_id": "MDg6QXJ0aWZhY3QxMzE2NjQ3NTgzOA==",
+      "name": "ep15",
+      "size_in_bytes": 7270515,
+      "url": "https://api.github.com/repos/charlatanstar-wq/pawclip/actions/artifacts/13166475838",
+      "archive_download_url": "https://api.github.com/repos/charlatanstar-wq/pawclip/actions/artifacts/13166475838/zip",
+      "expired": false,
+      "digest": "sha256:8ed0e945cc38e93d1c7c4d5e7ec343dd78d6af24c6d2885d403cbf3219e728a2",
+      "created_at": "2026-11-02T17:51:32Z",
+      "updated_at": "2026-11-02T17:51:32Z",
+      "expires_at": "2027-01-31T17:43:44Z",
+      "workflow_run": {
+        "id": 41493877852,
+        "repository_id": 1427980591,
+        "head_repository_id": 1427980591,
+        "head_branch": "ming-tts",
+        "head_sha": "3004e80e865c5a0048dcc798c35d5c40914fbe6f"
+      }
+    },
+    {
+      "id": 13166152011,
+      "node_id": "MDg6QXJ0aWZhY3QxMzE2NjE1MjAxMQ==",
+      "name": "ep16",
+      "size_in_bytes": 7611923,
+      "url": "https://api.github.com/repos/charlatanstar-wq/pawclip/actions/artifacts/13166152011",
+      "archive_download_url": "https://api.github.com/repos/charlatanstar-wq/pawclip/actions/artifacts/13166152011/zip",
+      "expired": false,
+      "digest": "sha256:d88defe3ca2edabb1c3f731cdb3014a9fe7a34101631a4eb52965a77e42011c2",
+      "created_at": "2026-11-02T17:51:31Z",
+      "updated_at": "2026-11-02T17:51:31Z",
+      "expires_at": "2027-01-31T17:43:44Z",
+      "workflow_run": {
+        "id": 41493877852,
+        "repository_id": 1427980591,
+        "head_repository_id": 1427980591,
+        "head_branch": "ming-tts",
+        "head_sha": "3004e80e865c5a0048dcc798c35d5c40914fbe6f"
+      }
+    },
+    {
+      "id": 13165862598,
+      "node_id": "MDg6QXJ0aWZhY3QxMzE2NTg2MjU5OA==",
+      "name": "ep17",
+      "size_in_bytes": 7922119,
+      "url": "https://api.github.com/repos/charlatanstar-wq/pawclip/actions/artifacts/13165862598",
+      "archive_download_url": "https://api.github.com/repos/charlatanstar-wq/pawclip/actions/artifacts/13165862598/zip",
+      "expired": false,
+      "digest": "sha256:2ca3b13fae0e46acc759c953541111dba193be4fbafdc2127d7f252890791bd5",
+      "created_at": "2026-11-02T17:52:56Z",
+      "updated_at": "2026-11-02T17:52:56Z",
+      "expires_at": "2027-01-31T17:43:44Z",
+      "workflow_run": {
+        "id": 41493877852,
+        "repository_id": 1427980591,
+        "head_repository_id": 1427980591,
+        "head_branch": "ming-tts",
+        "head_sha": "3004e80e865c5a0048dcc798c35d5c40914fbe6f"
+      }
+    },
+    {
+      "id": 13165857094,
+      "node_id": "MDg6QXJ0aWZhY3QxMzE2NTg1NzA5NA==",
+      "name": "ep18",
+      "size_in_bytes": 7509440,
+      "url": "https://api.github.com/repos/charlatanstar-wq/pawclip/actions/artifacts/13165857094",
+      "archive_download_url": "https://api.github.com/repos/charlatanstar-wq/pawclip/actions/artifacts/13165857094/zip",
+      "expired": false,
+      "digest": "sha256:d2bf9f443fae590ade3ed18288428f9d73767f24913c1ed9a294fde163479fe3",
+      "created_at": "2026-11-02T17:49:25Z",
+      "updated_at": "2026-11-02T17:49:25Z",
+      "expires_at": "2027-01-31T17:43:44Z",
+      "workflow_run": {
+        "id": 41493877852,
+        "repository_id": 1427980591,
+        "head_repository_id": 1427980591,
+        "head_branch": "ming-tts",
+        "head_sha": "3004e80e865c5a0048dcc798c35d5c40914fbe6f"
+      }
+    },
+    {
+      "id": 13165537669,
+      "node_id": "MDg6QXJ0aWZhY3QxMzE2NTUzNzY2OQ==",
+      "name": "ep20",
+      "size_in_bytes": 6885606,
+      "url": "https://api.github.com/repos/charlatanstar-wq/pawclip/actions/artifacts/13165537669",
+      "archive_download_url": "https://api.github.com/repos/charlatanstar-wq/pawclip/actions/artifacts/13165537669/zip",
+      "expired": false,
+      "digest": "sha256:9b3f3c64b1fd7786e14faf38e62a1736e954961250b228525c3986b9fa4e07bc",
+      "created_at": "2026-11-02T17:51:11Z",
+      "updated_at": "2026-11-02T17:51:11Z",
+      "expires_at": "2027-01-31T17:43:44Z",
+      "workflow_run": {
+        "id": 41493877852,
+        "repository_id": 1427980591,
+        "head_repository_id": 1427980591,
+        "head_branch": "ming-tts",
+        "head_sha": "3004e80e865c5a0048dcc798c35d5c40914fbe6f"
+      }
+    },
+    {
+      "id": 13165487922,
+      "node_id": "MDg6QXJ0aWZhY3QxMzE2NTQ4NzkyMg==",
+      "name": "ep19",
+      "size_in_bytes": 6904411,
+      "url": "https://api.github.com/repos/charlatanstar-wq/pawclip/actions/artifacts/13165487922",
+      "archive_download_url": "https://api.github.com/repos/charlatanstar-wq/pawclip/actions/artifacts/13165487922/zip",
+      "expired": false,
+      "digest": "sha256:3a51d5046f3f55c1631b80e6163ba89e3a5efd5679c05bfa53e37375c4264843",
+      "created_at": "2026-11-02T17:50:32Z",
+      "updated_at": "2026-11-02T17:50:32Z",
+      "expires_at": "2027-01-31T17:43:44Z",
+      "workflow_run": {
+        "id": 41493877852,
+        "repository_id": 1427980591,
+        "head_repository_id": 1427980591,
+        "head_branch": "ming-tts",
+        "head_sha": "3004e80e865c5a0048dcc798c35d5c40914fbe6f"
+      }
+    },
+    {
+      "id": 13165238440,
+      "node_id": "MDg6QXJ0aWZhY3QxMzE2NTIzODQ0MA==",
+      "name": "ep14",
+      "size_in_bytes": 7806097,
+      "url": "https://api.github.com/repos/charlatanstar-wq/pawclip/actions/artifacts/13165238440",
+      "archive_download_url": "https://api.github.com/repos/charlatanstar-wq/pawclip/actions/artifacts/13165238440/zip",
+      "expired": false,
+      "digest": "sha256:63b88e4b83a314d1045965cb989b419c93ddfdae780e817812989ec261b67065",
+      "created_at": "2026-11-02T17:51:22Z",
+      "updated_at": "2026-11-02T17:51:22Z",
+      "expires_at": "2027-01-31T17:43:44Z",
+      "workflow_run": {
+        "id": 41493877852,
+        "repository_id": 1427980591,
+        "head_repository_id": 1427980591,
+        "head_branch": "ming-tts",
+        "head_sha": "3004e80e865c5a0048dcc798c35d5c40914fbe6f"
+      }
+    },
+    {
+      "id": 13164989252,
+      "node_id": "MDg6QXJ0aWZhY3QxMzE2NDk4OTI1Mg==",
+      "name": "ep21",
+      "size_in_bytes": 7529399,
+      "url": "https://api.github.com/repos/charlatanstar-wq/pawclip/actions/artifacts/13164989252",
+      "archive_download_url": "https://api.github.com/repos/charlatanstar-wq/pawclip/actions/artifacts/13164989252/zip",
+      "expired": false,
+      "digest": "sha256:bad4d73c57ed5c59e2e480679263a758b01ca0e88f68f459847ee9b8e3bc61ac",
+      "created_at": "2026-11-02T17:49:24Z",
+      "updated_at": "2026-11-02T17:49:24Z",
+      "expires_at": "2027-01-31T17:43:44Z",
+      "workflow_run": {
+        "id": 41493877852,
+        "repository_id": 1427980591,
+        "head_repository_id": 1427980591,
+        "head_branch": "ming-tts",
+        "head_sha": "3004e80e865c5a0048dcc798c35d5c40914fbe6f"
+      }
+    }
+  ]
+}
