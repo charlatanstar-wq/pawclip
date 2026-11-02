@@ -5,10 +5,11 @@ on:
 jobs:
   tts:
     runs-on: ubuntu-latest
-    timeout-minutes: 200
+    timeout-minutes: 240
     strategy:
+      fail-fast: false
       matrix:
-        part: [0, 1, 2]
+        ep: [ep13, ep14, ep15, ep16, ep17, ep18, ep19, ep20, ep21, ep22]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -21,22 +22,20 @@ jobs:
           sed -i "s/torch.autocast(device_type='cuda', dtype=torch.bfloat16)/torch.autocast(device_type=('cuda' if torch.cuda.is_available() else 'cpu'), dtype=torch.bfloat16, enabled=torch.cuda.is_available())/" Ming-3.0-tts/modeling_bailingmm.py
           sed -i "s/prompt_waveform.to(device=self.device, dtype=torch.bfloat16)/prompt_waveform.to(device=self.device, dtype=next(self.parameters()).dtype)/" Ming-3.0-tts/modeling_bailingmm.py
           python -c "from huggingface_hub import snapshot_download;snapshot_download('inclusionAI/Ming-3.0-tts-0.5B',local_dir='model')"
-          python -c "import json;J=json.load(open('jobs/fix.json'));json.dump(J[${{ matrix.part }}::3],open('jobs/part.json','w'),ensure_ascii=False)"
       - name: synth
-        run: python run.py jobs/part.json 2>&1 | grep -v "it/s\]" | grep -v INFO
+        run: python run.py jobs/${{ matrix.ep }}.json 2>&1 | grep -E "^(try|done|Trace|  File|[A-Za-z]*Error)"
       - uses: actions/upload-artifact@v4
         with:
-          name: fix${{ matrix.part }}
-          path: out/fix
+          name: ${{ matrix.ep }}
+          path: out/${{ matrix.ep }}
   asr:
     needs: tts
+    if: always()
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/download-artifact@v4
-        with: {pattern: 'fix*', path: out/fix, merge-multiple: true}
+        with: {path: out}
       - run: sudo apt-get install -y -q ffmpeg >/dev/null && pip install -q faster-whisper && python asr.py
       - uses: actions/upload-artifact@v4
-        with: {name: asr2, path: asr.json}
-      - uses: actions/upload-artifact@v4
-        with: {name: fixall, path: out/fix}
+        with: {name: asr, path: asr.json}
