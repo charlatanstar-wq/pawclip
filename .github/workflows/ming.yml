@@ -29,3 +29,13 @@ jobs:
         with:
           name: ${{ matrix.ep }}
           path: out/fix
+  asr:
+    needs: tts
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with: {name: fix, path: out/fix}
+      - run: pip install -q faster-whisper && python asr.py
+      - uses: actions/upload-artifact@v4
+        with: {name: asr, path: asr.json}
