@@ -10,7 +10,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        ep: [ep13, ep16]
+        ep: [ep15]
     steps:
       - uses: actions/checkout@v4
       - run: |
@@ -22,10 +22,11 @@ jobs:
         with: {name: '${{ matrix.ep }}', path: '${{ matrix.ep }}.mp4'}
   pub:
     needs: r
+    if: always()
     runs-on: ubuntu-latest
     steps:
       - uses: actions/download-artifact@v4
         with: {path: o, merge-multiple: true}
       - run: |
           cd o && ls -la && git init -q -b vibe-out && git add -A && git -c user.name=bot -c user.email=bot@x commit -qm out
-          git push -f https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git vibe-out2
+          git push -f https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git vibe-out3
