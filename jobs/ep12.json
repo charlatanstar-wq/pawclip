@@ -1,0 +1,85 @@
+[
+{
+"task": "IP",
+"text": "大家好，欢迎来到Vibe知识大赏。今天我们来聊一个特别有意思的问题，你肯定想不到答案。",
+"ip": "灵小琪",
+"out": "out/ep12/ref.wav"
+},
+{
+"task": "TTS",
+"text": "[Question-ei]超市结账，你总觉得旁边那条队更快？",
+"ref": "out/ep12/ref.wav",
+"ref_text": "大家好，欢迎来到Vibe知识大赏。今天我们来聊一个特别有意思的问题，你肯定想不到答案。",
+"out": "out/ep12/b00.wav"
+},
+{
+"task": "TTS",
+"text": "这不是你运气差，是数学站在了它那边。",
+"ref": "out/ep12/ref.wav",
+"ref_text": "大家好，欢迎来到Vibe知识大赏。今天我们来聊一个特别有意思的问题，你肯定想不到答案。",
+"out": "out/ep12/b01.wav"
+},
+{
+"task": "TTS",
+"text": "假设有三条队，速度差不多，你随便站了一条。",
+"ref": "out/ep12/ref.wav",
+"ref_text": "大家好，欢迎来到Vibe知识大赏。今天我们来聊一个特别有意思的问题，你肯定想不到答案。",
+"out": "out/ep12/b02.wav"
+},
+{
+"task": "TTS",
+"text": "你这条恰好最快的概率，只有三分之一。",
+"ref": "out/ep12/ref.wav",
+"ref_text": "大家好，欢迎来到Vibe知识大赏。今天我们来聊一个特别有意思的问题，你肯定想不到答案。",
+"out": "out/ep12/b03.wav"
+},
+{
+"task": "TTS",
+"text": "也就是说，[Sigh]三次里有两次，旁边总有一条比你快。",
+"ref": "out/ep12/ref.wav",
+"ref_text": "大家好，欢迎来到Vibe知识大赏。今天我们来聊一个特别有意思的问题，你肯定想不到答案。",
+"out": "out/ep12/b04.wav"
+},
+{
+"task": "TTS",
+"text": "如果换成五条队，你最快的概率只剩20%。",
+"ref": "out/ep12/ref.wav",
+"ref_text": "大家好，欢迎来到Vibe知识大赏。今天我们来聊一个特别有意思的问题，你肯定想不到答案。",
+"out": "out/ep12/b05.wav"
+},
+{
+"task": "TTS",
+"text": "更扎心的是，[Laughter]你记住的，永远是被超车的那几次。",
+"ref": "out/ep12/ref.wav",
+"ref_text": "大家好，欢迎来到Vibe知识大赏。今天我们来聊一个特别有意思的问题，你肯定想不到答案。",
+"out": "out/ep12/b06.wav"
+},
+{
+"task": "TTS",
+"text": "那怎么办？很多银行和机场，用的是一条长队，叫号分配。",
+"ref": "out/ep12/ref.wav",
+"ref_text": "大家好，欢迎来到Vibe知识大赏。今天我们来聊一个特别有意思的问题，你肯定想不到答案。",
+"out": "out/ep12/b07.wav"
+},
+{
+"task": "TTS",
+"text": "总体等待时间差不多，但再也没有人比你“插队”快了。",
+"ref": "out/ep12/ref.wav",
+"ref_text": "大家好，欢迎来到Vibe知识大赏。今天我们来聊一个特别有意思的问题，你肯定想不到答案。",
+"out": "out/ep12/b08.wav"
+},
+{
+"task": "TTS",
+"text": "下次排队，别频繁换队，换来换去，往往更慢。",
+"ref": "out/ep12/ref.wav",
+"ref_text": "大家好，欢迎来到Vibe知识大赏。今天我们来聊一个特别有意思的问题，你肯定想不到答案。",
+"out": "out/ep12/b09.wav"
+},
+{
+"task": "TTS",
+"text": "你是那种爱换队的人吗？",
+"ref": "out/ep12/ref.wav",
+"ref_text": "大家好，欢迎来到Vibe知识大赏。今天我们来聊一个特别有意思的问题，你肯定想不到答案。",
+"out": "out/ep12/b10.wav"
+}
+]

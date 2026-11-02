@@ -1,0 +1,92 @@
+[
+{
+"task": "IP",
+"text": "大家好，欢迎来到Vibe知识大赏。今天我们来聊一个特别有意思的问题，你肯定想不到答案。",
+"ip": "灵楷",
+"out": "out/ep8/ref.wav"
+},
+{
+"task": "TTS",
+"text": "一张普通的A4纸，只要对折42次，厚度就能从地球碰到月亮。",
+"ref": "out/ep8/ref.wav",
+"ref_text": "大家好，欢迎来到Vibe知识大赏。今天我们来聊一个特别有意思的问题，你肯定想不到答案。",
+"out": "out/ep8/b00.wav"
+},
+{
+"task": "TTS",
+"text": "不是夸张，是算出来的。",
+"ref": "out/ep8/ref.wav",
+"ref_text": "大家好，欢迎来到Vibe知识大赏。今天我们来聊一个特别有意思的问题，你肯定想不到答案。",
+"out": "out/ep8/b01.wav"
+},
+{
+"task": "TTS",
+"text": "一张纸大约0.1毫米。对折一次，0.2毫米；两次，0.4毫米。",
+"ref": "out/ep8/ref.wav",
+"ref_text": "大家好，欢迎来到Vibe知识大赏。今天我们来聊一个特别有意思的问题，你肯定想不到答案。",
+"out": "out/ep8/b02.wav"
+},
+{
+"task": "TTS",
+"text": "折到第10次，大概10厘米，一本字典那么厚。",
+"ref": "out/ep8/ref.wav",
+"ref_text": "大家好，欢迎来到Vibe知识大赏。今天我们来聊一个特别有意思的问题，你肯定想不到答案。",
+"out": "out/ep8/b03.wav"
+},
+{
+"task": "TTS",
+"text": "第20次，100米，超过30层楼。",
+"ref": "out/ep8/ref.wav",
+"ref_text": "大家好，欢迎来到Vibe知识大赏。今天我们来聊一个特别有意思的问题，你肯定想不到答案。",
+"out": "out/ep8/b04.wav"
+},
+{
+"task": "TTS",
+"text": "第27次，13公里，已经比珠穆朗玛峰高出一截。",
+"ref": "out/ep8/ref.wav",
+"ref_text": "大家好，欢迎来到Vibe知识大赏。今天我们来聊一个特别有意思的问题，你肯定想不到答案。",
+"out": "out/ep8/b05.wav"
+},
+{
+"task": "TTS",
+"text": "第30次，超过100公里，已经到了太空的边界。",
+"ref": "out/ep8/ref.wav",
+"ref_text": "大家好，欢迎来到Vibe知识大赏。今天我们来聊一个特别有意思的问题，你肯定想不到答案。",
+"out": "out/ep8/b06.wav"
+},
+{
+"task": "TTS",
+"text": "[Surprise-oh]第42次，44万公里。地球到月球，平均才38万公里。",
+"ref": "out/ep8/ref.wav",
+"ref_text": "大家好，欢迎来到Vibe知识大赏。今天我们来聊一个特别有意思的问题，你肯定想不到答案。",
+"out": "out/ep8/b07.wav"
+},
+{
+"task": "TTS",
+"text": "这就是指数增长：前面慢得让人想放弃，后面快得让人看不懂。",
+"ref": "out/ep8/ref.wav",
+"ref_text": "大家好，欢迎来到Vibe知识大赏。今天我们来聊一个特别有意思的问题，你肯定想不到答案。",
+"out": "out/ep8/b08.wav"
+},
+{
+"task": "TTS",
+"text": "现实里你折不了这么多次，[Laughter]纸的世界纪录是12次。",
+"ref": "out/ep8/ref.wav",
+"ref_text": "大家好，欢迎来到Vibe知识大赏。今天我们来聊一个特别有意思的问题，你肯定想不到答案。",
+"out": "out/ep8/b09.wav"
+},
+{
+"task": "TTS",
+"text": "可很多事都是这样涨的：复利、习惯、一门手艺。",
+"ref": "out/ep8/ref.wav",
+"ref_text": "大家好，欢迎来到Vibe知识大赏。今天我们来聊一个特别有意思的问题，你肯定想不到答案。",
+"out": "out/ep8/b10.wav"
+},
+{
+"task": "TTS",
+"text": "你现在折到第几次了？",
+"ref": "out/ep8/ref.wav",
+"ref_text": "大家好，欢迎来到Vibe知识大赏。今天我们来聊一个特别有意思的问题，你肯定想不到答案。",
+"out": "out/ep8/b11.wav"
+}
+]
