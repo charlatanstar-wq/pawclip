@@ -9,7 +9,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        ep: [fix]
+        ep: [ep23, ep24]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -36,10 +36,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/download-artifact@v4
-        with: {name: fix, path: out}
+        with: {path: dl}
+      - run: mkdir -p out && cp -r dl/*/* out/ && ls -R out
       - run: sudo apt-get install -y -q ffmpeg >/dev/null && pip install -q faster-whisper && python asr.py
       - uses: actions/upload-artifact@v4
         with: {name: asr, path: asr.json}
       - run: |
-          mkdir pub && cp -r out pub/ && cp asr.json pub/ && cd pub && git init -q -b ming-fix && git add -A && git -c user.name=bot -c user.email=bot@x commit -qm fix
-          git push -f https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git ming-fix
+          mkdir pub && cp -r out pub/ && cp asr.json pub/ && cd pub && git init -q -b ming-out2 && git add -A && git -c user.name=bot -c user.email=bot@x commit -qm out
+          git push -f https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git ming-out2

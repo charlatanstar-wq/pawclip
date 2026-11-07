@@ -1,0 +1,64 @@
+[
+{
+"task": "IP",
+"text": "大家好，欢迎来到Vibe知识大赏。今天我们来聊一个特别有意思的问题，你肯定想不到答案。",
+"ip": "灵小萌",
+"out": "out/ep23/ref.wav"
+},
+{
+"task": "TTS",
+"text": "二十一万九千块，这是你一辈子的奶茶钱。",
+"ref": "out/ep23/ref.wav",
+"ref_text": "大家好，欢迎来到Vibe知识大赏。今天我们来聊一个特别有意思的问题，你肯定想不到答案。",
+"out": "out/ep23/b00.wav"
+},
+{
+"task": "TTS",
+"text": "一杯十五块，一天一杯。",
+"ref": "out/ep23/ref.wav",
+"ref_text": "大家好，欢迎来到Vibe知识大赏。今天我们来聊一个特别有意思的问题，你肯定想不到答案。",
+"out": "out/ep23/b01.wav"
+},
+{
+"task": "TTS",
+"text": "一年就是五千四百七十五块。",
+"ref": "out/ep23/ref.wav",
+"ref_text": "大家好，欢迎来到Vibe知识大赏。今天我们来聊一个特别有意思的问题，你肯定想不到答案。",
+"out": "out/ep23/b02.wav"
+},
+{
+"task": "TTS",
+"text": "从二十岁喝到六十岁，整整四十年。",
+"ref": "out/ep23/ref.wav",
+"ref_text": "大家好，欢迎来到Vibe知识大赏。今天我们来聊一个特别有意思的问题，你肯定想不到答案。",
+"out": "out/ep23/b03.wav"
+},
+{
+"task": "TTS",
+"text": "[Surprise-oh]加起来，二十一万九千。",
+"ref": "out/ep23/ref.wav",
+"ref_text": "大家好，欢迎来到Vibe知识大赏。今天我们来聊一个特别有意思的问题，你肯定想不到答案。",
+"out": "out/ep23/b04.wav"
+},
+{
+"task": "TTS",
+"text": "要是一天两杯，就是四十三万八。",
+"ref": "out/ep23/ref.wav",
+"ref_text": "大家好，欢迎来到Vibe知识大赏。今天我们来聊一个特别有意思的问题，你肯定想不到答案。",
+"out": "out/ep23/b05.wav"
+},
+{
+"task": "TTS",
+"text": "当然，快乐也值钱。",
+"ref": "out/ep23/ref.wav",
+"ref_text": "大家好，欢迎来到Vibe知识大赏。今天我们来聊一个特别有意思的问题，你肯定想不到答案。",
+"out": "out/ep23/b06.wav"
+},
+{
+"task": "TTS",
+"text": "你一周喝几杯？",
+"ref": "out/ep23/ref.wav",
+"ref_text": "大家好，欢迎来到Vibe知识大赏。今天我们来聊一个特别有意思的问题，你肯定想不到答案。",
+"out": "out/ep23/b07.wav"
+}
+]
