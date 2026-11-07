@@ -7,44 +7,50 @@
 },
 {
 "task": "TTS",
-"text": "标三十四块，卖出十六条，标四十四块，卖出十七条。",
+"text": "定价三十四块，卖出十六条。定价四十四块，卖出十七条。",
 "ref": "out/ep26/ref.wav",
 "ref_text": "大家好，欢迎来到Vibe知识大赏。今天我们来聊一个特别有意思的问题，你肯定想不到答案。",
-"out": "out/ep26/b02.wav"
+"out": "out/ep26/b02.wav",
+"ip": "灵旭"
 },
 {
 "task": "TTS",
-"text": "标三十九块的，卖出了二十一条，比最便宜的还多。",
+"text": "定价三十九块的，卖出了二十一条，比最便宜的还多。",
 "ref": "out/ep26/ref.wav",
 "ref_text": "大家好，欢迎来到Vibe知识大赏。今天我们来聊一个特别有意思的问题，你肯定想不到答案。",
-"out": "out/ep26/b03.wav"
+"out": "out/ep26/b03.wav",
+"ip": "灵旭"
 },
 {
 "task": "TTS",
 "text": "因为尾数是九，会让你下意识觉得：这是打过折的价。",
 "ref": "out/ep26/ref.wav",
 "ref_text": "大家好，欢迎来到Vibe知识大赏。今天我们来聊一个特别有意思的问题，你肯定想不到答案。",
-"out": "out/ep26/b04.wav"
+"out": "out/ep26/b04.wav",
+"ip": "灵旭"
 },
 {
 "task": "TTS",
 "text": "再加上我们看价格只看第一位，九块九看着像九块，其实就是十块。",
 "ref": "out/ep26/ref.wav",
 "ref_text": "大家好，欢迎来到Vibe知识大赏。今天我们来聊一个特别有意思的问题，你肯定想不到答案。",
-"out": "out/ep26/b05.wav"
+"out": "out/ep26/b05.wav",
+"ip": "灵旭"
 },
 {
 "task": "TTS",
 "text": "研究还发现，越是你不熟悉的新品，这招越管用。",
 "ref": "out/ep26/ref.wav",
 "ref_text": "大家好，欢迎来到Vibe知识大赏。今天我们来聊一个特别有意思的问题，你肯定想不到答案。",
-"out": "out/ep26/b06.wav"
+"out": "out/ep26/b06.wav",
+"ip": "灵旭"
 },
 {
 "task": "TTS",
 "text": "下次看到九块九，直接当十块算。你最近被哪个九块九拿下了？",
 "ref": "out/ep26/ref.wav",
 "ref_text": "大家好，欢迎来到Vibe知识大赏。今天我们来聊一个特别有意思的问题，你肯定想不到答案。",
-"out": "out/ep26/b07.wav"
+"out": "out/ep26/b07.wav",
+"ip": "灵旭"
 }
 ]
