@@ -9,7 +9,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        ep: [ep26]
+        ep: [ep25, ep26]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
